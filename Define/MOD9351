@@ -1,0 +1,264 @@
+;
+;  MOD9351: Register/bit definitions for the P89LPC9351
+;
+;   Copyright (C) 2009-2011  Jesus Calvino-Fraga, jesuscf@gmail.com
+;
+;   This library is free software; you can redistribute it and/or
+;   modify it under the terms of the GNU Lesser General Public
+;   License as published by the Free Software Foundation; either
+;   version 2.1 of the License, or (at your option) any later version.
+;
+;   This library is distributed in the hope that it will be useful,
+;   but WITHOUT ANY WARRANTY; without even the implied warranty of
+;   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;   Lesser General Public License for more details.
+;
+;   You should have received a copy of the GNU Lesser General Public
+;   License along with this library; if not, write to the Free Software
+;   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+;
+ 
+ACC             DATA  0E0H ; Accumulator
+ADCON0          DATA  08EH ; A/D control register 0
+ADCON1          DATA  097H ; A/D control register 1
+ADINS           DATA  0A3H ; A/D input select
+ADMODA          DATA  0C0H ; A/D mode register A
+BNDI1           BIT   0C7H
+BURST1          BIT   0C6H
+SCC1            BIT   0C5H
+SCAN1           BIT   0C4H
+BNDI0           BIT   0C3H
+BURST0          BIT   0C2H
+SCC0            BIT   0C1H
+SCAN0           BIT   0C0H
+ADMODB          DATA  0A1H ; A/D mode register B
+AD0BH           DATA  0BBH ; A/D_0 boundary high register
+AD0BL           DATA  0A6H ; A/D_0 boundary low register
+AD0DAT0         DATA  0C5H ; A/D_0 data register 0
+AD0DAT1         DATA  0C6H ; A/D_0 data register 1
+AD0DAT2         DATA  0C7H ; A/D_0 data register 2
+AD0DAT3         DATA  0F4H ; A/D_0 data register 3
+AD1BH           DATA  0C4H ; A/D_1 boundary high register
+AD1BL           DATA  0BCH ; A/D_1 boundary low register
+AD1DAT0         DATA  0D5H ; A/D_1 data register 0
+AD1DAT1         DATA  0D6H ; A/D_1 data register 1
+AD1DAT2         DATA  0D7H ; A/D_1 data register 2
+AD1DAT3         DATA  0F5H ; A/D_1 data register 3
+AUXR1           DATA  0A2H ; Auxiliary function register
+B               DATA  0F0H ; B register
+BRGR0           DATA  0BEH ; Baud rate generator 0 rate low
+BRGR1           DATA  0BFH ; Baud rate generator 0 rate high
+BRGCON          DATA  0BDH ; Baud rate generator 0 control
+CCCRA           DATA  0EAH ; Capture compare A control register
+CCCRB           DATA  0EBH ; Capture compare B control register
+CCCRC           DATA  0ECH ; Capture compare C control register
+CCCRD           DATA  0EDH ; Capture compare D control register
+CMP1            DATA  0ACH ; Comparator 1 control register
+CMP2            DATA  0ADH ; Comparator 2 control register
+DEECON          DATA  0F1H ; Data EEPROM control register
+DEEDAT          DATA  0F2H ; Data EEPROM data register
+DEEADR          DATA  0F3H ; Data EEPROM address register
+DIVM            DATA  095H ; CPU clock divide-by-M control
+DPH             DATA  083H ; Data pointer high
+DPL             DATA  082H ; Data pointer low
+FMADRH          DATA  0E7H ; Program flash address high
+FMADRL          DATA  0E6H ; Program flash address low
+FMCON           DATA  0E4H ; Program flash control Read
+FMDATA          DATA  0E5H ; Program flash data
+I2ADR           DATA  0DBH ; I2C-bus slave address register
+I2CON           DATA  0D8H ; I2C-bus control register
+I2EN            BIT   0DEH
+STA             BIT   0DDH
+STO             BIT   0DCH
+SI              BIT   0DBH
+AA              BIT   0DAH
+CRSEL           BIT   0D8H
+I2DAT           DATA  0DAH ; I2C-bus data register
+I2SCLH          DATA  0DDH ; Serial clock generator/SCL duty cycle register high
+I2SCLL          DATA  0DCH ; Serial clock generator/SCL duty cycle register low
+I2STAT          DATA  0D9H ; I2C-bus status register
+ICRAH           DATA  0ABH ; Input capture A register high
+ICRAL           DATA  0AAH ; Input capture A register low
+ICRBH           DATA  0AFH ; Input capture B register high
+ICRBL           DATA  0AEH ; Input capture B register low
+IEN0            DATA  0A8H ; Interrupt enable 0
+EA              BIT   0AFH
+EWDRT           BIT   0AEH
+EBO             BIT   0ADH
+ES              BIT   0ACH
+ESR             BIT   0ACH
+ET1             BIT   0ABH
+EX1             BIT   0AAH
+ET0             BIT   0A9H
+EX0             BIT   0A8H
+IEN1            DATA  0E8H ; Interrupt enable 1
+EADEE           BIT   0EFH
+EST             BIT   0EEH
+ECCU            BIT   0ECH
+ESPI            BIT   0EBH
+EC              BIT   0EAH
+EKBI            BIT   0E9H
+EI2C            BIT   0E8H
+IP0             DATA  0B8H ; Interrupt priority 0
+PWDRT           BIT   0BEH
+PBO             BIT   0BDH
+PS              BIT   0BCH
+PSR             BIT   0BCH
+PT1             BIT   0BBH
+PX1             BIT   0BAH
+PT0             BIT   0B9H
+PX0             BIT   0B8H
+IP0H            DATA  0B7H ; Interrupt priority 0 high
+IP1             DATA  0F8H ; Interrupt priority 1
+PADEE           BIT   0FFH
+PST             BIT   0FEH
+PCCU            BIT   0FCH
+PSPI            BIT   0FBH
+PC_             BIT   0FAH
+PKBI            BIT   0F9H
+PI2C            BIT   0F8H
+IP1H            DATA  0F7H ; Interrupt priority 1 high
+KBCON           DATA  094H ; Keypad control register
+KBMASK          DATA  086H ; Keypad interrupt mask register
+KBPATN          DATA  093H ; Keypad pattern register
+OCRAH           DATA  0EFH ; Output compare A register high
+OCRAL           DATA  0EEH ; Output compare A register low
+OCRBH           DATA  0FBH ; Output compare B register high
+OCRBL           DATA  0FAH ; Output compare B register low
+OCRCH           DATA  0FDH ; Output compare C register high
+OCRCL           DATA  0FCH ; Output compare C register low
+OCRDH           DATA  0FFH ; Output compare D register high
+OCRDL           DATA  0FEH ; Output compare D register low
+P0              DATA  080H ; Port 0
+T1              BIT   087H
+KB7             BIT   087H
+CMP_1           BIT   086H
+KB6             BIT   086H
+CMPREF          BIT   085H
+KB5             BIT   085H
+CIN1A           BIT   084H
+KB4             BIT   084H
+CIN1B           BIT   083H
+KB3             BIT   083H
+CIN2A           BIT   082H
+KB2             BIT   082H
+CIN2B           BIT   081H
+KB1             BIT   081H
+CMP_2           BIT   080H
+KB0             BIT   080H
+P1              DATA  090H ; Port 1
+OCC             BIT   097H
+OCB             BIT   096H
+RST             BIT   095H
+INT1            BIT   094H
+INT0            BIT   093H
+SDA             BIT   093H
+T0              BIT   092H
+SCL             BIT   092H
+RXD             BIT   091H
+TXD             BIT   090H
+P2              DATA  0A0H ; Port 2
+ICA             BIT   0A7H
+OCA             BIT   0A6H
+SPICLK          BIT   0A5H
+SS              BIT   0A4H
+MISO            BIT   0A3H
+MOSI            BIT   0A2H
+OCD             BIT   0A1H
+ICB             BIT   0A0H
+P3              DATA  0B0H ; Port 3
+XTAL1           BIT   0B1H
+XTAL2           BIT   0B0H
+P0M1            DATA  084H ; Port 0 output mode 1
+P0M2            DATA  085H ; Port 0 output mode 2
+P1M1            DATA  091H ; Port 1 output mode 1
+P1M2            DATA  092H ; Port 1 output mode 2
+P2M1            DATA  0A4H ; Port 2 output mode 1
+P2M2            DATA  0A5H ; Port 2 output mode 2
+P3M1            DATA  0B1H ; Port 3 output mode 1
+P3M2            DATA  0B2H ; Port 3 output mode 2
+PCON            DATA  087H ; Power control register
+PCONA           DATA  0B5H ; Power control register A
+PSW             DATA  0D0H ; Program status word
+CY              BIT   0D7H
+AC              BIT   0D6H
+F0              BIT   0D5H
+RS1             BIT   0D4H
+RS0             BIT   0D3H
+OV              BIT   0D2H
+F1              BIT   0D1H
+P               BIT   0D0H
+PT0AD           DATA  0F6H ; Port 0 digital input disable
+RSTSRC          DATA  0DFH ; Reset source register
+RTCCON          DATA  0D1H ; RTC control
+RTCH            DATA  0D2H ; RTC register high
+RTCL            DATA  0D3H ; RTC register low
+SADDR           DATA  0A9H ; Serial port address register
+SADEN           DATA  0B9H ; Serial port address enable
+SBUF            DATA  099H ; Serial Port data buffer register
+SCON            DATA  098H ; Serial port control
+SM0             BIT   09FH
+FE              BIT   09FH
+SM1             BIT   09EH
+SM2             BIT   09DH
+REN             BIT   09CH
+TB8             BIT   09BH
+RB8             BIT   09AH
+TI              BIT   099H
+RI              BIT   098H
+SSTAT           DATA  0BAH ; Serial port extended status register
+SP              DATA  081H ; Stack pointer
+SPCTL           DATA  0E2H ; SPI control register
+SPSTAT          DATA  0E1H ; SPI status register
+SPDAT           DATA  0E3H ; SPI data register
+TAMOD           DATA  08FH ; Timer 0 and 1 auxiliary mode
+TCON            DATA  088H ; Timer 0 and 1 control
+TF1             BIT   08FH
+TR1             BIT   08EH
+TF0             BIT   08DH
+TR0             BIT   08CH
+IE1             BIT   08BH
+IT1             BIT   08AH
+IE0             BIT   089H
+IT0             BIT   088H
+TCR20           DATA  0C8H ; CCU control register 0
+PLEEN           BIT   0CFH
+HLTRN           BIT   0CEH
+HLTEN           BIT   0CDH
+ALTCD           BIT   0CCH
+ALTAB           BIT   0CBH
+TDIR2           BIT   0CAH
+TMOD21          BIT   0C9H
+TMOD20          BIT   0C8H
+TCR21           DATA  0F9H ; CCU control register 1
+TH0             DATA  08CH ; Timer 0 high
+TH1             DATA  08DH ; Timer 1 high
+TH2             DATA  0CDH ; CCU timer high
+TICR2           DATA  0C9H ; CCU interrupt control register
+TIFR2           DATA  0E9H ; CCU interrupt flag register
+TISE2           DATA  0DEH ; CCU interrupt status encode register
+TL0             DATA  08AH ; Timer 0 low
+TL1             DATA  08BH ; Timer 1 low
+TL2             DATA  0CCH ; CCU timer low
+TMOD            DATA  089H ; Timer 0 and 1 mode
+TOR2H           DATA  0CFH ; CCU reload register high
+TOR2L           DATA  0CEH ; CCU reload register low
+TPCR2H          DATA  0CBH ; Prescaler control register high
+TPCR2L          DATA  0CAH ; Prescaler control register low
+TRIM            DATA  096H ; Internal oscillator trim register
+WDCON           DATA  0A7H ; Watchdog control register
+WDL             DATA  0C1H ; Watchdog load
+WFEED1          DATA  0C2H ; Watchdog feed 1
+WFEED2          DATA  0C3H ; Watchdog feed 2
+BODCFG          XDATA 0FFC8H ; BOD configuration register
+CLKCON          XDATA 0FFDEH ; CLOCK Control register
+PGACON1         XDATA 0FFE1H ; PGA1 control register
+PGACON1B        XDATA 0FFE4H ; PGA1 control register B
+PGA1TRIM8X16X   XDATA 0FFE3H ; PGA1 trim register
+PGA1TRIM2X4X    XDATA 0FFE2H ; PGA1 trim register
+PGACON0         XDATA 0FFCAH ; PGA0 control register
+PGACON0B        XDATA 0FFCEH ; PGA0 control register B
+PGA0TRIM8X16X   XDATA 0FFCDH ; PGA0 trim register
+PGA0TRIM2X4X    XDATA 0FFCCH ; PGA0 trim register
+RTCDATH         XDATA 0FFBFH ; Real-time clock data register high
+RTCDATL         XDATA 0FFBEH ; Real-time clock data register low

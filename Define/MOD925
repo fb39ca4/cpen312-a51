@@ -1,0 +1,185 @@
+;
+;  MODDDE2: Register definition for NXP P89LPC924 and P89LPC925
+;  (Based on datasheet Rev. 03 - 15 December 2004)
+;
+;   Copyright (C) 2008-2011  Jesus Calvino-Fraga, jesuscf@gmail.com
+;
+;   This library is free software; you can redistribute it and/or
+;   modify it under the terms of the GNU Lesser General Public
+;   License as published by the Free Software Foundation; either
+;   version 2.1 of the License, or (at your option) any later version.
+;
+;   This library is distributed in the hope that it will be useful,
+;   but WITHOUT ANY WARRANTY; without even the implied warranty of
+;   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;   Lesser General Public License for more details.
+;
+;   You should have received a copy of the GNU Lesser General Public
+;   License along with this library; if not, write to the Free Software
+;   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+;
+ 
+ACC      DATA  0E0H; Accumulator
+ADCON1   DATA  097H; A/D control register 1
+ADINS    DATA  0A3H; A/D input select
+ADMODA   DATA  0C0H; A/D mode register A
+ADMODB   DATA  0A1H; A/D mode register B
+AD1BH    DATA  0C4H; A/D_1 boundary high register
+AD1BL    DATA  0BCH; A/D_1 boundary low register
+AD1DAT0  DATA  0D5H; A/D_1  DATA  register 0
+AD1DAT1  DATA  0D6H; A/D_1  DATA  register 1
+AD1DAT2  DATA  0D7H; A/D_1  DATA  register 2
+AD1DAT3  DATA  0F5H; A/D_1  DATA  register 3
+AUXR1    DATA  0A2H; Auxiliary function register
+B        DATA  0F0H; B register
+BRGR0    DATA  0BEH; Baud rate generator rate LOW
+BRGR1    DATA  0BFH; Baud rate generator rate HIGH
+BRGCON   DATA  0BDH; Baud rate generator control
+CMP1     DATA  0ACH; Comparator1 control register
+CMP2     DATA  0ADH; Comparator2 control register
+DIVM     DATA  095H; CPU clock divide-by-M control
+DPH      DATA  083H; DATA  pointer HIGH
+DPL      DATA  082H; DATA  pointer LOW
+FMADRH   DATA  0E7H; Program Flash address HIGH
+FMADRL   DATA  0E6H; Program Flash address LOW
+FMCON    DATA  0E4H; Program Flash control
+FMDATA   DATA  0E5H; Program Flash data
+I2ADR    DATA  0DBH; I2C slave address register
+I2CON    DATA  0D8H; I2C control register
+I2DAT    DATA  0DAH; I2C  DATA  register
+I2SCLH   DATA  0DDH; Serial clock generator/SCL duty cycle register HIGH
+I2SCLL   DATA  0DCH; Serial clock generator/SCL duty cycle register LOW
+I2STAT   DATA  0D9H; I2C status register
+IEN0     DATA  0A8H; Interrupt enable 0
+IEN1     DATA  0E8H; Interrupt enable 1
+IP0      DATA  0B8H; Interrupt priority 0
+IP0H     DATA  0B7H; Interrupt priority 0 HIGH
+IP1      DATA  0F8H; Interrupt priority 1
+IP1H     DATA  0F7H; Interrupt priority 1 HIGH
+KBCON    DATA  094H; Keypad control register
+KBMASK   DATA  086H; Keypad interrupt register mask
+KBPATN   DATA  093H; Keypad pattern register
+P0       DATA  080H; Port 0
+P1       DATA  090H; Port 1
+P3       DATA  0B0H; Port 3
+P0M1     DATA  084H; Port0 output mode1
+P0M2     DATA  085H; Port0 output mode2
+P1M1     DATA  091H; Port1 output mode1
+P1M2     DATA  092H; Port1 output mode2
+P3M1     DATA  0B1H; Port3 output mode1
+P3M2     DATA  0B2H; Port3 output mode2
+PCON     DATA  087H; Power control register
+PCONA    DATA  0B5H; Power control register A
+PSW      DATA  0D0H; Program status word
+PT0AD    DATA  0F6H; Port0 digital input disable
+RSTSRC   DATA  0DFH; Reset source register
+RTCCON   DATA  0D1H; Real-time clock control
+RTCH     DATA  0D2H; Real-time clock register HIGH
+RTCL     DATA  0D3H; Real-time clock register LOW
+SADDR    DATA  0A9H; Serial port address register
+SADEN    DATA  0B9H; Serial port address enable
+SBUF     DATA  099H; Serial Port  DATA  buffer register
+SCON     DATA  098H; Serial port control
+SSTAT    DATA  0BAH; Serial port extended status register
+SP       DATA  081H; Stack pointer
+TAMOD    DATA  08FH; Timer0 and 1 auxiliary mode
+TCON     DATA  088H; Timer0 and 1 control
+TH0      DATA  08CH; Timer0 HIGH
+TH1      DATA  08DH; Timer 1 HIGH
+TL0      DATA  08AH; Timer 0 LOW
+TL1      DATA  08BH; Timer 1 LOW
+TMOD     DATA  089H; Timer0 and 1 mode
+TRIM     DATA  096H; Internal oscillator trim register
+WDCON    DATA  0A7H; Watchdog control register
+WDL      DATA  0C1H; Watchdog load
+WFEED1   DATA  0C2H; Watchdog feed 1
+WFEED2   DATA  0C3H; Watchdog feed 2
+;
+; Bit definitions
+;
+I2EN     BIT   0DEH
+STA      BIT   0DDH
+STO      BIT   0DCH
+SI       BIT   0DBH
+AA       BIT   0DAH
+CRSEL    BIT   0D8H
+EA       BIT   0AFH
+EWDRT    BIT   0AEH
+EBO      BIT   0ADH
+ES       BIT   0ACH
+ESR      BIT   0ACH
+ET1      BIT   0ABH
+EX1      BIT   0AAH
+ET0      BIT   0A9H
+EX0      BIT   0A8H
+EAD      BIT   0EFH
+EST      BIT   0EEH
+EC       BIT   0EAH
+EKBI     BIT   0E9H
+EI2C     BIT   0E8H
+PWDRT    BIT   0BEH
+PBO      BIT   0BDH
+PS       BIT   0BCH
+PSR      BIT   0BCH
+PT1      BIT   0BBH
+PX1      BIT   0BAH
+PT0      BIT   0B9H
+PX0      BIT   0B8H
+PAD      BIT   0FFH
+PST      BIT   0FEH
+PC_      BIT   0FAH
+PKBI     BIT   0F9H
+PI2C     BIT   0F8H
+T1       BIT   087H
+CMP1B    BIT   086H
+CMPREF   BIT   085H
+CIN1A    BIT   084H
+CIN1B    BIT   083H
+CIN2A    BIT   082H
+CIN2B    BIT   081H
+CMP2B    BIT   080H
+KB7      BIT   087H
+KB6      BIT   086H
+KB5      BIT   085H
+KB4      BIT   084H
+KB3      BIT   083H
+KB2      BIT   082H
+KB1      BIT   081H
+KB0      BIT   080H
+RST      BIT   095H
+INT1     BIT   094H
+INT0     BIT   093H
+SDA      BIT   093H
+T0       BIT   092H
+SCL      BIT   092H
+RXD      BIT   091H
+TXD      BIT   090H
+P3_1     BIT   0B1H
+P3_0     BIT   0B0H
+XTAL1    BIT   0B1H
+XTAL2    BIT   0B0H
+CY       BIT   0D7H
+AC       BIT   0D6H
+F0       BIT   0D5H
+RS1      BIT   0D4H
+RS0      BIT   0D3H
+OV       BIT   0D2H
+F1       BIT   0D1H
+P        BIT   0D0H
+FE       BIT   09FH
+SM0      BIT   09FH
+SM1      BIT   09EH
+SM2      BIT   09DH
+REN      BIT   09CH
+TB8      BIT   09BH
+RB8      BIT   09AH
+TI       BIT   099H
+RI       BIT   098H
+TF1      BIT   08FH
+TR1      BIT   08EH
+TF0      BIT   08DH
+TR0      BIT   08CH
+IE1      BIT   08BH
+IT1      BIT   08AH
+IE0      BIT   089H
+IT0      BIT   088H

@@ -1,0 +1,131 @@
+;  MODLP52: Register definition for Atmel's AT89LP52
+;
+;   Copyright (C) 2011-2015  Jesus Calvino-Fraga, jesusc at ece.ubc.ca
+;
+;   This library is free software; you can redistribute it and/or
+;   modify it under the terms of the GNU Lesser General Public
+;   License as published by the Free Software Foundation; either
+;   version 2.1 of the License, or (at your option) any later version.
+;
+;   This library is distributed in the hope that it will be useful,
+;   but WITHOUT ANY WARRANTY; without even the implied warranty of
+;   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;   Lesser General Public License for more details.
+;
+;   You should have received a copy of the GNU Lesser General Public
+;   License along with this library; if not, write to the Free Software
+;   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+;
+;--------------------------------------------------------
+; Special Function Registers
+;--------------------------------------------------------
+P0             DATA 0x80
+P1             DATA 0x90
+P2             DATA 0xa0
+P3             DATA 0xb0
+P4             DATA 0xc0
+PMOD           DATA 0xc1
+PSW            DATA 0xd0
+ACC            DATA 0xe0
+B              DATA 0xf0
+SP             DATA 0x81
+DPL            DATA 0x82
+DPH            DATA 0x83
+DP0L           DATA 0x82
+DP0H           DATA 0x83
+DP1L           DATA 0x84
+DP1H           DATA 0x85
+AUXR           DATA 0x8e
+AUXR1          DATA 0xa2
+DPCF           DATA 0xa2
+TCON           DATA 0x88
+TMOD           DATA 0x89
+T2CON          DATA 0xc8
+T2MOD          DATA 0xc9
+TL0            DATA 0x8a
+TL1            DATA 0x8b
+TL2            DATA 0xcc
+TH0            DATA 0x8c
+TH1            DATA 0x8d
+TH2            DATA 0xcd
+TCONB          DATA 0x91
+RCAP2L         DATA 0xca
+RCAP2H         DATA 0xcb
+WDTRST         DATA 0xa6
+WDTCON         DATA 0xa7
+SCON           DATA 0x98
+SBUF           DATA 0x99
+SADEN          DATA 0xb9
+SADDR          DATA 0xa9
+IE             DATA 0xa8
+IP             DATA 0xb8
+IPH            DATA 0xb7
+PCON           DATA 0x87
+CLKREG         DATA 0x8f
+MEMCON         DATA 0x96
+;--------------------------------------------------------
+; special function bits
+;--------------------------------------------------------
+SCK            BIT 0x97
+MISO           BIT 0x96
+MOSI           BIT 0x95
+T2EX           BIT 0x91
+T2             BIT 0x90
+RD             BIT 0xb7
+WR             BIT 0xb6
+T1             BIT 0xb5
+T0             BIT 0xb4
+INT1           BIT 0xb3
+INT0           BIT 0xb2
+TXD            BIT 0xb1
+RXD            BIT 0xb0
+XTAL2          BIT 0xc7
+XTAL1          BIT 0xc6
+PSEN           BIT 0xc5
+ALE            BIT 0xc4
+CY             BIT 0xd7
+AC             BIT 0xd6
+F0             BIT 0xd5
+RS1            BIT 0xd4
+RS0            BIT 0xd3
+OV             BIT 0xd2
+UD             BIT 0xd1
+P              BIT 0xd0
+TF1            BIT 0x8f
+TR1            BIT 0x8e
+TF0            BIT 0x8d
+TR0            BIT 0x8c
+IE1            BIT 0x8b
+IT1            BIT 0x8a
+IE0            BIT 0x89
+IT0            BIT 0x88
+TF2            BIT 0xcf
+EXF2           BIT 0xce
+RCLK           BIT 0xcd
+TCLK           BIT 0xcc
+EXEN2          BIT 0xcb
+TR2            BIT 0xca
+C_T2           BIT 0xc9
+CP_RL2         BIT 0xc8
+SM0            BIT 0x9f
+FE             BIT 0x9f
+SM1            BIT 0x9e
+SM2            BIT 0x9d
+REN            BIT 0x9c
+TB8            BIT 0x9b
+RB8            BIT 0x9a
+TI             BIT 0x99
+RI             BIT 0x98
+EA             BIT 0xaf
+ET2            BIT 0xad
+ES             BIT 0xac
+ET1            BIT 0xab
+EX1            BIT 0xaa
+ET0            BIT 0xa9
+EX0            BIT 0xa8
+PT2            BIT 0xbd
+PS             BIT 0xbc
+PT1            BIT 0xbb
+PX1            BIT 0xba
+PT0            BIT 0xb9
+PX0            BIT 0xb8
