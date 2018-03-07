@@ -329,7 +329,7 @@ void push_include(const char *infile)
 		{
 			//Ok, that didn't work either.  Try the 'Define' folder
 			strcpy(asmfile2, ExeDir);
-			strcat(asmfile2,"..\\Define\\");
+			strcat(asmfile2,"../define/");
 			strcat(asmfile2, asmfile);
 			fin = fopen(asmfile2, "rb");
 			if(fin==NULL)
